@@ -1,0 +1,43 @@
+:root{
+  --bg:#f7f9fb; --card:#fff; --accent:#0b5ed7; --muted:#6b7280;
+  --radius:10px; --maxw:1100px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#111}
+.container{max-width:var(--maxw);margin:28px auto;padding:16px}
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:18px 24px;background:linear-gradient(90deg,#08306b, #0b5ed7);color:#fff;border-radius:0 0 12px 12px}
+.brand h1{font-size:1.1rem;margin:0}
+.top-nav a{color:#e6f0ff;margin-left:14px;text-decoration:none}
+.top-nav .cta{background:#fff;color:#08306b;padding:8px 12px;border-radius:6px}
+
+.hero{display:grid;grid-template-columns:1fr 340px;gap:20px;align-items:start;margin-top:22px}
+.hero-content{background:linear-gradient(180deg,#ffffff 0%, #f1f7ff 100%);padding:28px;border-radius:12px}
+.hero-content h2{margin:0 0 8px 0}
+.login-card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(12,22,50,.08)}
+.login-card h3{margin:0 0 12px 0}
+.login-card label{display:block;margin-top:10px;font-size:.9rem;color:var(--muted)}
+.login-card input[type="text"], .login-card input[type="password"]{width:100%;padding:10px;border-radius:8px;border:1px solid #e6eef9;margin-top:6px}
+.btn{padding:10px 14px;border-radius:8px;border:0;cursor:pointer}
+.btn.primary{background:var(--accent);color:#fff;width:100%;margin-top:12px}
+.btn.ghost{background:transparent;border:1px solid #dfeafc;color:var(--accent);width:48%;margin-top:8px}
+.row{display:flex;justify-content:space-between;align-items:center;margin-top:8px}
+.checkbox{font-size:.85rem;color:var(--muted)}
+.link{font-size:.85rem;color:var(--accent);text-decoration:none}
+
+.quick-features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+.feature{background:var(--card);padding:16px;border-radius:10px;text-align:center}
+.account-overview{display:flex;gap:12px;margin-top:12px}
+.account{background:#fff;padding:12px;border-radius:8px;flex:1;box-shadow:0 6px 18px rgba(12,22,50,.04)}
+.balance{display:block;font-size:1.1rem;margin-top:6px}
+
+.site-footer{margin-top:28px;padding:16px;text-align:center;color:var(--muted);font-size:.9rem;background:transparent;border-top:1px solid #e8eef6;padding-top:20px}
+
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr}
+  .quick-features{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:480px){
+  .quick-features{grid-template-columns:1fr}
+  .top-nav{display:none}
+}
